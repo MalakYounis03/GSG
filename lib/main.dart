@@ -1,15 +1,29 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MaterialApp(
-      home: Scaffold(
-    body: Center(
-      child: Image.network(
-        "https://th.bing.com/th/id/R.b820b58bf745982e67e9d26b48dd718a?rik=hW81Q%2fXnC9zF7A&pid=I",
-        width: double.infinity,
-        height: double.infinity,
-        fit: BoxFit.fill,
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Center(
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Container(
+            color: Colors.green,
+            width: 200,
+            height: 200,
+          ),
+          ElevatedButton(
+            onPressed: () {},
+            child: Text('Child'),
+          ),
+        ],
       ),
-    ),
-  )));
+    )));
+  }
 }

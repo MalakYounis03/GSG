@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () {},
+            onLongPress: () {},
             child: Text('Child'),
           ),
         ],
